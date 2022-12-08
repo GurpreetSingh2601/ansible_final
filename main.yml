@@ -1,0 +1,12 @@
+---
+
+- name: installing nginx
+  hosts: webservers
+  tasks:
+    - name: import role application
+      import_role:
+       name: application
+
+    - name: import role http
+      import_role:
+        name: http 
